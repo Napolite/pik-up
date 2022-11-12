@@ -5,7 +5,7 @@ import NotificationIcon from "../../assets/images/notifications.png";
 import avatar from "../../assets/images/no image.png";
 import "./navbar.css";
 
-function NavBar({ active }) {
+function NavBar({ active }: any) {
   return (
     <div className="navbar-root">
       <div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./tab.css";
 
-function TabInfo({ title, value, color, image }) {
+function TabInfo({ title, value, color, image }: any) {
   return (
     <div className="tabInfo-root">
       <div className="info">

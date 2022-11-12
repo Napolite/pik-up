@@ -37,7 +37,7 @@ const labels = [
   "Dec",
 ];
 
-function ChartDiv({ title, chartdata }) {
+function ChartDiv({ title, chartdata }: any) {
   const data = {
     labels,
     datasets: [
@@ -63,7 +63,7 @@ function ChartDiv({ title, chartdata }) {
 
     plugins: {
       legend: {
-        position: "top",
+        position: "top" as const,
         display: false,
       },
       title: {
