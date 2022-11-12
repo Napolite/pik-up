@@ -1,0 +1,141 @@
+.main-root {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: manrope;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.top-details {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 8px;
+}
+
+.grid-blocks {
+  display: grid;
+  width: 260px;
+  grid-template-columns: 45% 45%;
+  grid-gap: 20px;
+  /* background-color: green; */
+}
+
+.grid-blocks > div {
+  width: 120px;
+  height: 72px;
+  background-color: #f8f8f8;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.chart-div {
+  height: 348px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  justify-content: space-around;
+}
+
+.chart-div:nth-child(2)::after {
+  content: "";
+  height: 290px;
+  background-color: #edeff2;
+  width: 1px;
+  position: absolute;
+  left: 61%;
+  bottom: 21%;
+}
+.chart-div:nth-child(3) {
+  margin-left: 15px;
+}
+
+.chart-div > div:nth-child(1) {
+  font-size: 14px;
+}
+
+.bottom-details {
+  display: flex;
+  width: 98.3%;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.bottom-block {
+  background-color: white;
+  width: 408px;
+  height: 290px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom-block-title {
+  font-size: 14px;
+  font-weight: 700;
+  width: 90%;
+  margin: auto;
+}
+
+.bottom-block-objects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  padding-bottom: 20px;
+}
+.bottom-block-object {
+  display: flex;
+  width: 90%;
+  height: 42px;
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: space-between;
+  padding: 10px 0px;
+  border-top: 1px solid #edeff2;
+}
+
+.object-identity {
+  display: flex;
+  width: fit-content;
+  justify-content: space-between;
+}
+.identity-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #3c4049;
+}
+.object-details {
+  display: flex;
+  flex-direction: column;
+  height: 42px;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.object-details > div:nth-child(1) {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f0e0b;
+}
+.object-details > div:nth-child(2) {
+  font-size: 13px;
+  color: #7e8695;
+}
