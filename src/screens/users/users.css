@@ -3,12 +3,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 100%;
+  width: 97%;
+  margin: auto;
   margin-top: 30px;
   font-family: manrope;
-  padding: 0px 24px;
   overflow-x: hidden;
   margin-bottom: 20px;
+  padding-left: 20px;
+  /* background: red; */
 }
 
 .title {
@@ -25,7 +27,7 @@
   justify-content: space-between;
   margin-bottom: 30px;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: #7e8695;
 }
@@ -38,21 +40,24 @@
 }
 
 .users-tabs {
-  display: flex;
-  width: 99%;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  column-gap: 2%;
+  width: 100%;
   margin: auto;
   margin-bottom: 30px;
-  justify-content: space-between;
 }
 
+.tab-div {
+  width: 100%;
+}
 .users-filter {
   display: flex;
-  width: 97.5%;
+  width: 95%;
   height: 56px;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10px;
-  margin: auto;
+  padding: 0px 24px;
   background-color: white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -67,7 +72,7 @@
 }
 
 .users-filter > div:first-child {
-  width: 35%;
+  width: 37%;
 }
 
 .users-filter > div:first-child > div {
@@ -113,19 +118,18 @@
 }
 
 .users-table {
-  width: 99%;
-  margin: auto;
+  max-width: 99%;
   margin-top: 10px;
+  /* padding-left:; */
 }
 
 .table-header {
   max-width: 98.5%;
   height: 40px;
-  margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #3c4049;
   margin-bottom: 10px;
   font-weight: 600;

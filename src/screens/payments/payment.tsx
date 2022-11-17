@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Payment({ payment }:any) {
+function Payment({ payment }: any) {
   const [colors, setColors] = useState([
     "#A24444",
     "#1D871D",
@@ -19,7 +19,7 @@ function Payment({ payment }:any) {
             height: " 24px",
             background: `${colors[Math.floor(Math.random() * 6)]}`,
             borderRadius: "50%",
-            fontSize: "10px",
+            fontSize: "0.6rem",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

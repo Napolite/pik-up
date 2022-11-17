@@ -182,7 +182,7 @@ function Users() {
         <div className="title">Users</div>
         <div className="users-tabs">
           {tabs.map((tab) => (
-            <div>
+            <div className="tab-div">
               <TabInfo
                 value={tab.value}
                 color={tab.color}

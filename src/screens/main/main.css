@@ -12,7 +12,7 @@
 
 .title {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -50,21 +50,18 @@
   justify-content: space-around;
 }
 
-.chart-div:nth-child(2)::after {
-  content: "";
+.line {
   height: 290px;
   background-color: #edeff2;
-  width: 1px;
-  position: absolute;
-  left: 61%;
-  bottom: 21%;
+  width: 0.01rem;
+  margin: 30px 5px 0 5px;
 }
 .chart-div:nth-child(3) {
   margin-left: 15px;
 }
 
 .chart-div > div:nth-child(1) {
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 .bottom-details {
@@ -79,7 +76,7 @@
 
 .bottom-block {
   background-color: white;
-  width: 408px;
+  width: 32%;
   height: 290px;
   border-radius: 8px;
   display: flex;
@@ -88,7 +85,7 @@
 }
 
 .bottom-block-title {
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 700;
   width: 90%;
   margin: auto;
@@ -118,7 +115,7 @@
   justify-content: space-between;
 }
 .identity-name {
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #3c4049;
 }
@@ -131,11 +128,11 @@
 }
 
 .object-details > div:nth-child(1) {
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #0f0e0b;
 }
 .object-details > div:nth-child(2) {
-  font-size: 13px;
+  font-size: 0.75rem;
   color: #7e8695;
 }

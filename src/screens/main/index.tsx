@@ -33,7 +33,7 @@ function MainDashboard() {
   ]);
   return (
     <>
-      <NavBar active={"Dashboard"}/>
+      <NavBar active={"Dashboard"} />
       <div className="main-root">
         <div className="title">Dashboard</div>
         <div className="top-details">
@@ -56,6 +56,8 @@ function MainDashboard() {
               ]}
             />
           </div>
+          <div className="line"></div>
+
           <div className="chart-div">
             <div>Deliveries per month(NGN)</div>
             <ChartDiv

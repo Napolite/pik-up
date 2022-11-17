@@ -60,6 +60,7 @@ function ChartDiv({ title, chartdata }: any) {
       },
     },
     responsive: true,
+    maintainAspectRation: false,
 
     plugins: {
       legend: {
@@ -73,7 +74,7 @@ function ChartDiv({ title, chartdata }: any) {
     },
   };
   return (
-    <div style={{ width: 440, marginLeft: "10px" }}>
+    <div style={{ width: "420px", marginLeft: "10px" }}>
       <Line options={options} data={data} />
     </div>
   );
