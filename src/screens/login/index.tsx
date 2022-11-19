@@ -3,6 +3,7 @@ import Logo from "../../assets/images/Group (1).png";
 import ForgotPassword from "./forgot";
 import LoginMain from "./login";
 import "./login.css";
+import OTP from "./otp";
 function Login() {
   return (
     <div className="login-root">
@@ -14,7 +15,7 @@ function Login() {
         </div>
       </div>
       <div>
-        <ForgotPassword />
+        <OTP />
       </div>
     </div>
   );
