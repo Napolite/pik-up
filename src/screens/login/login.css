@@ -1,0 +1,106 @@
+.login-root {
+  background-color: white;
+  height: 100vh;
+}
+.login-nav-root {
+  height: 70px;
+  padding: 0px 20px;
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: manrope;
+  background: white;
+  border-bottom: 1px solid #edeff2;
+}
+.login-nav-logo {
+  width: 57.56px;
+  height: 28.7px;
+}
+
+.login-nav-contact {
+  display: flex;
+  width: 185px;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  font-size: 0.775rem;
+  color: #7e8695;
+}
+
+.login-nav-contact-button {
+  width: 107px;
+  height: 35px;
+  border: 1px solid #d2d5da;
+  background-color: white;
+  color: black;
+}
+
+.login-form-root {
+  width: 580px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+}
+
+.form-title {
+  font-size: 1rem;
+  color: #0f0e0b;
+  text-align: center;
+  font-weight: 700;
+}
+.form-note {
+  font-size: 0.875;
+  color: #7e8695;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.login-form {
+  background-color: #f8f8f8;
+  height: 50vh;
+  width: 93.3%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.login-form > div {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.login-form label {
+  color: #7e8695;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+.login-form input {
+  height: 38px;
+  width: 468px;
+  border: 1px solid #dfe1e5;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-form button {
+  height: 43px;
+  width: 470px;
+  background-color: black;
+  color: white;
+  font-size: 0.875rem;
+  margin: auto;
+  border: none;
+}
+
+.login-form > p {
+  text-align: left;
+  font-size: 0.875rem;
+  color: #0f0e0b;
+  position: relative;
+  left: 38px;
+}

@@ -6,6 +6,7 @@ import { useState } from "react";
 import Users from "./screens/users";
 import Drivers from "./screens/drivers";
 import Payments from "./screens/payments";
+import Login from "screens/login";
 function App() {
   const [activeTab, setTab] = useState("Dashboard");
   return (
@@ -14,6 +15,7 @@ function App() {
         {/* <NavBar active={activeTab} setTab={setTab} /> */}
         <Routes>
           <Route path="/" element={<MainDashboard />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/users" element={<Users />} />
           <Route path="/drivers" element={<Drivers />} />
           <Route path="/payments" element={<Payments />} />
