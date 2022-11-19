@@ -1,9 +1,17 @@
 import React from "react";
-import Logo from "../../assets/images/Group (1).png";
+
+//components
 import ForgotPassword from "./forgot";
 import LoginMain from "./login";
-import "./login.css";
 import OTP from "./otp";
+import ResetPassword from "./reset";
+
+//css
+import "./login.css";
+
+//assets
+import Logo from "../../assets/images/Group (1).png";
+
 function Login() {
   return (
     <div className="login-root">
@@ -15,7 +23,7 @@ function Login() {
         </div>
       </div>
       <div>
-        <OTP />
+        <ResetPassword />
       </div>
     </div>
   );
