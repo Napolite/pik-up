@@ -8,16 +8,16 @@ function LoginMain() {
         Input your email and password to get access to your account
       </div>
       <div className="login-form">
-        <div>
+        <div className="form-input">
           <label>Email Address</label>
           <input type="text" />
         </div>
-        <div>
+        <div className="form-input">
           <label>Password</label>
           <input type="password" />
         </div>
-        <button>Submit</button>
-        <p>Forgot password</p>
+        <button className="form-button">Submit</button>
+        <p className="form-link">Forgot password</p>
       </div>
     </div>
   );

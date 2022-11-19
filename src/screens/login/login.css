@@ -38,9 +38,7 @@
 
 .login-form-root {
   width: 580px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: auto;
   margin-top: 30px;
 }
 
@@ -49,6 +47,7 @@
   color: #0f0e0b;
   text-align: center;
   font-weight: 700;
+  font-size: 24px;
 }
 .form-note {
   font-size: 0.875;
@@ -67,19 +66,19 @@
   flex-direction: column;
 }
 
-.login-form > div {
+.form-input {
   display: flex;
   flex-direction: column;
   margin: auto;
 }
 
-.login-form label {
+.form-input label {
   color: #7e8695;
   font-size: 0.875rem;
   margin-bottom: 8px;
 }
 
-.login-form input {
+.form-input input {
   height: 38px;
   width: 468px;
   border: 1px solid #dfe1e5;
@@ -87,7 +86,7 @@
   font-size: 1rem;
 }
 
-.login-form button {
+.form-button {
   height: 43px;
   width: 470px;
   background-color: black;
@@ -97,7 +96,25 @@
   border: none;
 }
 
-.login-form > p {
+.form-link {
+  text-align: left;
+  font-size: 0.875rem;
+  color: #0f0e0b;
+  position: relative;
+  left: 38px;
+}
+
+.forgot-password-form {
+  background-color: #f8f8f8;
+  height: 40vh;
+  width: 93.3%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.forgot-password-form .form-link {
   text-align: left;
   font-size: 0.875rem;
   color: #0f0e0b;

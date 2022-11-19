@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../assets/images/Group (1).png";
+import ForgotPassword from "./forgot";
 import LoginMain from "./login";
 import "./login.css";
 function Login() {
@@ -13,7 +14,7 @@ function Login() {
         </div>
       </div>
       <div>
-        <LoginMain />
+        <ForgotPassword />
       </div>
     </div>
   );
