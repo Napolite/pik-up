@@ -14,9 +14,14 @@ function Pikup({ pik }: any) {
             style={{
               height: "28px",
               width: "99px",
-              color: pik.status === "Pending Driver" ? "#E07900" : "#368E00",
+              color:
+                (pik.status === "Pending Driver" && "#E07900") ||
+                (pik.status === "In Transit" && "black") ||
+                "#368E00",
               background:
-                pik.status === "Pending Driver" ? "#FDEDD9" : "#EFFFE6",
+                (pik.status === "Pending Driver" && "#FDEDD9") ||
+                (pik.status === "In Transit" && "#f8f8f8") ||
+                "#EFFFE6",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -29,6 +34,30 @@ function Pikup({ pik }: any) {
         </div>
       ) : (
         <div className="pikup-expanded">
+          <div className="pikup-sparse-expanded">
+            <div>{`${pik.from}  → ${pik.to}`}</div>
+            <div
+              style={{
+                height: "28px",
+                width: "99px",
+                color:
+                  (pik.status === "Pending Driver" && "#E07900") ||
+                  (pik.status === "In Transit" && "black") ||
+                  "#368E00",
+                background:
+                  (pik.status === "Pending Driver" && "#FDEDD9") ||
+                  (pik.status === "In Transit" && "white") ||
+                  "#EFFFE6",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "0.75rem",
+                borderRadius: "4px",
+              }}
+            >
+              {pik.status}
+            </div>
+          </div>
           <div>
             <div>
               <div> User: </div> <div>{pik.user}</div>

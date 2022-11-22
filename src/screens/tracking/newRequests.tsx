@@ -1,7 +1,7 @@
 import Pikup from "components/pikup";
 import React from "react";
 
-function NewRequests({ pik }: any) {
+function Requests({ pik }: any) {
   return (
     <div>
       {pik.map((p: any) => (
@@ -11,4 +11,4 @@ function NewRequests({ pik }: any) {
   );
 }
 
-export default NewRequests;
+export default Requests;

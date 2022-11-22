@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "components/navbar";
 import "./tracking.css";
-import NewRequests from "./newRequests";
+import Requests from "./newRequests";
 function Tracking() {
   const [newReq, setNewReq] = useState([
     {
@@ -96,6 +96,209 @@ function Tracking() {
     },
   ]);
 
+  const [inTransit, setInTransit] = useState([
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "In Transit",
+      driver: "pending",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+  ]);
+
+  const [completed, setCompleted] = useState([
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+  ]);
   // ⃗ →
 
   return (
@@ -108,12 +311,17 @@ function Tracking() {
         <div className="title">Tracking</div>
         <div className="tracking-container">
           <div>
-            <div>
-              <NewRequests pik={newReq} />
-            </div>
+            <div className="tracking-title">New Requests</div>
+            <Requests pik={newReq} />
           </div>
-          <div>kbkjbkjb</div>
-          <div>kkjbkjbkjb</div>
+          <div>
+            <div className="tracking-title">Pik-Ups in Transit</div>
+            <Requests pik={inTransit} />
+          </div>
+          <div>
+            <div className="tracking-title">Completed Pik-ups</div>
+            <Requests pik={completed} />
+          </div>
         </div>
       </div>
     </>
