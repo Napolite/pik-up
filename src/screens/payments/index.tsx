@@ -16,6 +16,57 @@ function Payments() {
       name: "Benson Davies",
       desc: "Successful Payment of Dispatch",
       amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "pik-up admin",
+      desc: "weekly payouts to drivers",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "pik-up admin",
+      desc: "weekly payouts to drivers",
+      amount: " ₦ 100,001.00",
+      type: "debit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "weekly payouts to drivers",
+      amount: " ₦ 100,001.00",
+      type: "debit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "pik-up admin",
+      desc: "weekly payouts to drivers",
+      amount: " ₦ 100,001.00",
+      type: "debit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "pik-up admin",
+      desc: "weekly payouts to drivers",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+  ]);
+  const [debits, setdebit] = useState([
+    {
+      time: "23/02/2022 • 12:42",
+      name: "pik-up admin",
+      desc: "weekly payouts to drivers",
+      amount: " ₦ 100,001.00",
+      type: "debit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
       type: "debit",
     },
     {
@@ -54,6 +105,73 @@ function Payments() {
       type: "debit",
     },
   ]);
+
+  const [credit, setCredit] = useState([
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+    {
+      time: "23/02/2022 • 12:42",
+      name: "Benson Davies",
+      desc: "Successful Payment of Dispatch",
+      amount: " ₦ 100,001.00",
+      type: "credit",
+    },
+  ]);
+
+  const [tabs, setTabs] = useState({
+    All: payments,
+    Credit: credit,
+    Debit: debits,
+  });
+
+  const [tab, setTab] = useState("All");
   return (
     <>
       <div>
@@ -65,9 +183,11 @@ function Payments() {
           <div className="payments-details">
             <div className="payments-tab">
               <div>
-                <div>All Transactions</div>
-                <div>Credits (₦ 1,200,034)</div>
-                <div>Debits (₦ 200,034)</div>
+                <div onClick={() => setTab("All")}>All Transactions</div>
+                <div onClick={() => setTab("Credit")}>
+                  Credits (₦ 1,200,034)
+                </div>
+                <div onClick={() => setTab("Debit")}>Debits (₦ 200,034)</div>
               </div>
               <div>
                 <div>5th Oct, 2022</div>
@@ -82,7 +202,11 @@ function Payments() {
               <div>Type</div>
             </div>
             <div>
-              {payments.map((payment) => (
+              {tabs[
+                (tab === "All" && "All") ||
+                  (tab === "Credit" && "Credit") ||
+                  "Debit"
+              ].map((payment) => (
                 <Payment payment={payment} />
               ))}
             </div>

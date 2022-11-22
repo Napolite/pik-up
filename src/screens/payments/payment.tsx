@@ -27,13 +27,27 @@ function Payment({ payment }: any) {
             marginRight: "5px",
           }}
         >
-          {payment.name.charAt()}
+          {payment?.name?.charAt()}
         </div>
         {payment.name}
       </div>
       <div>{payment.desc}</div>
       <div>{payment.amount}</div>
-      <div>{payment.type}</div>
+      <div
+        style={{
+          height: "28px",
+          width: "99px",
+          color: (payment.type === "debit" && "#E07900") || "#368E00",
+          background: payment.type === "debit" ? "#FDEDD9" : "#EFFFE6",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "0.75rem",
+          borderRadius: "4px",
+        }}
+      >
+        {payment.type}
+      </div>
     </div>
   );
 }
