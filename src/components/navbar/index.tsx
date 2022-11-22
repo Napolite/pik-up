@@ -16,7 +16,12 @@ function NavBar({ active }: any) {
           <Link to="/" className={`link ${active === "Dashboard" && "focus"}`}>
             <div>Dashboard</div>
           </Link>
-          <div>Tracking</div>
+          <Link
+            to="/tracking"
+            className={`link ${active === "Tracking" && "focus"}`}
+          >
+            <div>Tracking</div>
+          </Link>
 
           <Link to="/users" className={`link ${active === "Users" && "focus"}`}>
             <div>Users</div>

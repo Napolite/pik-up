@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <NavBar active={activeTab} setTab={setTab} /> */}
         <Routes>
           <Route path="/" element={<MainDashboard />} />
           <Route path="/login" element={<Login />} />

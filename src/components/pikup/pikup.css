@@ -1,0 +1,66 @@
+.pikup-root {
+  width: 100%;
+  background-color: white;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.pikup-sparse {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: 60px;
+  align-items: center;
+}
+
+.pikup-sparse > div:nth-child(1) {
+  font-size: 0.875rem;
+  color: #5c6370;
+  width: 234px;
+  /* display: none; */
+}
+
+.pikup-expanded {
+  display: flex;
+  flex-direction: column;
+}
+
+.pikup-expanded > div {
+  width: 95%;
+  margin: auto;
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.pikup-expanded > div:nth-child(1) > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  height: 50px;
+}
+/* .pikup-expanded > div:nth-child(1) {
+  width: 80%;
+} */
+
+.pikup-expanded > div:nth-child(1) > div > div:nth-child(2) {
+  color: black;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.map {
+  height: 64px;
+}
+
+.pikup-expanded > div:nth-child(3) > div > div:nth-child(1) {
+  font-size: 0.75rem;
+  color: #5c6370;
+}
+
+.pikup-expanded > div:nth-child(3) > div > div:nth-child(2) {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
