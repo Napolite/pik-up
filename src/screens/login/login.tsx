@@ -1,6 +1,6 @@
 import React from "react";
 
-function LoginMain() {
+function LoginMain({ setPage }: any) {
   return (
     <div className="login-form-root">
       <div className="form-title">Sign in to your account</div>
@@ -17,7 +17,14 @@ function LoginMain() {
           <input type="password" />
         </div>
         <button className="form-button">Submit</button>
-        <p className="form-link">Forgot password</p>
+        <p
+          className="form-link"
+          onClick={() => {
+            setPage("ForgotPassword");
+          }}
+        >
+          Forgot password
+        </p>
       </div>
     </div>
   );

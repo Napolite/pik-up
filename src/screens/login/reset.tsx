@@ -1,6 +1,6 @@
 import React from "react";
 
-function ResetPassword() {
+function ResetPassword({ setPage }: any) {
   return (
     <div className="login-form-root">
       <div className="form-title">Reset Password</div>
@@ -14,7 +14,9 @@ function ResetPassword() {
           <label>Retype Password</label>
           <input type="password" />
         </div>
-        <button className="form-button">Submit</button>
+        <button className="form-button" onClick={setPage("Login")}>
+          Submit
+        </button>
       </div>
     </div>
   );

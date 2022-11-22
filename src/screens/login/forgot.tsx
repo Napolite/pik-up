@@ -1,6 +1,6 @@
 import React from "react";
 
-function ForgotPassword() {
+function ForgotPassword({ setPage }: any) {
   return (
     <div>
       <div className="login-form-root">
@@ -14,7 +14,9 @@ function ForgotPassword() {
             <input type="email" />
           </div>
           <button className="form-button">Continue</button>
-          <p className="form-link">Sign in</p>
+          <p className="form-link" onClick={() => setPage("Login")}>
+            Sign in
+          </p>
         </div>
       </div>
     </div>

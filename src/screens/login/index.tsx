@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //components
 import ForgotPassword from "./forgot";
@@ -13,6 +13,8 @@ import "./login.css";
 import Logo from "../../assets/images/Group (1).png";
 
 function Login() {
+  const [page, setPage] = useState("Login");
+
   return (
     <div className="login-root">
       <div className="login-nav-root">
@@ -23,7 +25,10 @@ function Login() {
         </div>
       </div>
       <div>
-        <ResetPassword />
+        {(page === "Login" && <LoginMain setPage={setPage} />) ||
+          (page === "OTP" && <OTP setPage={setPage} />) ||
+          (page === "ResetPassword" && <ResetPassword setPage={setPage} />) ||
+          (page === "ForgotPassword" && <ForgotPassword setPage={setPage} />)}
       </div>
     </div>
   );

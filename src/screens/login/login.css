@@ -103,6 +103,7 @@
   color: #0f0e0b;
   position: relative;
   left: 38px;
+  cursor: pointer;
 }
 
 .forgot-password-form {

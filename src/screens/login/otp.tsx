@@ -1,6 +1,6 @@
 import React from "react";
 
-function OTP() {
+function OTP({ setPage }: any) {
   return (
     <div>
       <div className="login-form-root">
@@ -14,7 +14,9 @@ function OTP() {
             <input type="text" />
           </div>
           <button className="form-button">Continue</button>
-          <p className="form-link">Sign in</p>
+          <p className="form-link" onClick={setPage("Login")}>
+            Sign in
+          </p>
         </div>
       </div>
     </div>
