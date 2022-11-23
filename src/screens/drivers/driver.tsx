@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
-function Driver({ driver}:any) {
+function Driver({ driver, view }: any) {
   const [colors, setColors] = useState([
     "#A24444",
     "#1D871D",
@@ -43,7 +43,9 @@ function Driver({ driver}:any) {
         </div>
       </div>
       <div className="driver-view">
-        <button className="button">View</button>
+        <button className="button" onClick={() => view(true)}>
+          View
+        </button>
       </div>
     </div>
   );

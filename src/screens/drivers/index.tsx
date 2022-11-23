@@ -6,6 +6,7 @@ import group2 from "../../assets/images/group (1).png";
 import atm1 from "../../assets/images/local_atm.png";
 import atm2 from "../../assets/images/local_atm (1).png";
 import searchIcon from "../../assets/images/Primary fill.png";
+import UserDetails from "components/userDetails";
 
 import "./drivers.css";
 import Driver from "./driver";
@@ -189,6 +190,66 @@ function Drivers() {
     },
   ]);
 
+  const [view, setView] = useState(false);
+
+  const [piks, setPiks] = useState([
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+  ]);
+
   const [screenTab, setScreenTab] = useState("Drivers");
 
   const [activeTab, setActiveTab] = useState("New Drivers");
@@ -199,13 +260,14 @@ function Drivers() {
       <div className="users-root">
         <div className="title">Drivers & Fleets</div>
         <div className="driver-fleet-tab">
-          <div className={screenTab === "Drivers"? "tab-focus" : ""}
+          <div
+            className={screenTab === "Drivers" ? "tab-focus" : ""}
             onClick={() => setScreenTab("Drivers")}
           >
             Drivers
           </div>
           <div
-            className={screenTab === "Fleets"? "tab-focus":""}
+            className={screenTab === "Fleets" ? "tab-focus" : ""}
             onClick={() => setScreenTab("Fleets")}
           >
             Fleets
@@ -234,13 +296,13 @@ function Drivers() {
                   New Drivers(45)
                 </div>
                 <div
-                  className={activeTab === "All Drivers"?"active":""}
+                  className={activeTab === "All Drivers" ? "active" : ""}
                   onClick={() => setActiveTab("All Drivers")}
                 >
                   All Drivers(129)
                 </div>
                 <div
-                  className={activeTab === "Active Drivers"? "active" : ""}
+                  className={activeTab === "Active Drivers" ? "active" : ""}
                   onClick={() => setActiveTab("Active Drivers")}
                 >
                   Active Drivers(100)
@@ -273,8 +335,12 @@ function Drivers() {
               </div>
               <div className="users-details-table">
                 {(activeTab === "New Users" &&
-                  drivers.map((driver) => <Driver driver={driver} />)) ||
-                  drivers2.map((driver) => <Driver driver={driver} />)}
+                  drivers.map((driver) => (
+                    <Driver driver={driver} view={setView} />
+                  ))) ||
+                  drivers2.map((driver) => (
+                    <Driver driver={driver} view={setView} />
+                  ))}
                 <div className="pagination-control">
                   <div>1/5</div>
                   <div>&#10094;</div>
@@ -289,6 +355,7 @@ function Drivers() {
           </>
         )}
       </div>
+      <div>{view ? <UserDetails piks={piks} view={setView} /> : <></>}</div>
     </>
   );
 }

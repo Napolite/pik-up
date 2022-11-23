@@ -7,6 +7,7 @@ import atm1 from "../../assets/images/local_atm.png";
 import atm2 from "../../assets/images/local_atm (1).png";
 import searchIcon from "../../assets/images/Primary fill.png";
 import Driver from "./driver";
+import UserDetails from "components/userDetails";
 
 function Fleets() {
   const [tabs, setTab] = useState([
@@ -186,6 +187,66 @@ function Fleets() {
     },
   ]);
 
+  const [view, setView] = useState(false);
+
+  const [piks, setPiks] = useState([
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+  ]);
+
   const [activeTab, setActiveTab] = useState("New fleets");
   return (
     <>
@@ -204,7 +265,7 @@ function Fleets() {
       <div className="users-filter">
         <div>
           <div
-            className={activeTab === "New fleets"?"active":""}
+            className={activeTab === "New fleets" ? "active" : ""}
             onClick={() => setActiveTab("New fleets")}
           >
             New fleets(45)
@@ -249,8 +310,8 @@ function Fleets() {
         </div>
         <div className="users-details-table">
           {(activeTab === "New Users" &&
-            fleets.map((fleet) => <Driver driver={fleet} />)) ||
-            fleets2.map((fleet) => <Driver driver={fleet} />)}
+            fleets.map((fleet) => <Driver driver={fleet} view={setView} />)) ||
+            fleets2.map((fleet) => <Driver driver={fleet} view={setView} />)}
           <div className="pagination-control">
             <div>1/5</div>
             <div>&#10094;</div>
@@ -258,6 +319,7 @@ function Fleets() {
           </div>
         </div>
       </div>
+      <div>{view ? <UserDetails piks={piks} view={setView} /> : <></>}</div>
     </>
   );
 }
