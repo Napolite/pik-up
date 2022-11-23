@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./users.css";
 
-function NewUsers({ user }:any) {
+function NewUsers({ user, view }: any) {
   const [colors, setColors] = useState([
     "#A24444",
     "#1D871D",
@@ -37,7 +37,9 @@ function NewUsers({ user }:any) {
       <div className="user-piks">{user.piks}</div>
       <div className="user-spent"> {user.spent}</div>
       <div className="user-view">
-        <button className="button">View</button>
+        <button className="button" onClick={() => view(true)}>
+          View
+        </button>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ function OTP({ setPage }: any) {
             <input type="text" />
           </div>
           <button className="form-button">Continue</button>
-          <p className="form-link" onClick={setPage("Login")}>
+          <p className="form-link" onClick={() => setPage("Login")}>
             Sign in
           </p>
         </div>

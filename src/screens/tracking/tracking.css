@@ -26,10 +26,15 @@
 
 .tracking-title {
   background-color: white;
-  border-bottom: 1px solid #dfe1e5;
-  height: 45px;
+  margin: auto;
   font-size: 0.875rem;
   padding: 0 20px;
+}
+
+.tracking-title > div {
+  width: 98%;
+  border-bottom: 1px solid #dfe1e5;
+  height: 56px;
   display: flex;
   align-items: center;
 }

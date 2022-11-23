@@ -10,6 +10,7 @@ import searchIcon from "../../assets/images/Primary fill.png";
 
 import "./users.css";
 import NewUsers from "./newUsers";
+import UserDetails from "components/userDetails";
 
 function Users() {
   const [tabs, setTab] = useState([
@@ -173,6 +174,66 @@ function Users() {
     },
   ]);
 
+  const [view, setView] = useState(false);
+
+  const [piks, setPiks] = useState([
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+    {
+      from: "45, upper ekenwa road, Benin ",
+      to: "65, ringroad, lower ekenwa, Orhodua",
+      user: "Benson Davies",
+      status: "Completed",
+      driver: "Onazi Kinging",
+      distance: "300km",
+      time: "45 mins",
+      weight: "400kg",
+      price: "₦ 5,200",
+    },
+  ]);
+
   const [activeTab, setActiveTab] = useState("New Users");
   return (
     <>
@@ -239,8 +300,8 @@ function Users() {
           </div>
           <div className="users-details-table">
             {(activeTab === "New Users" &&
-              users.map((user) => <NewUsers user={user} />)) ||
-              users2.map((user) => <NewUsers user={user} />)}
+              users.map((user) => <NewUsers user={user} view={setView} />)) ||
+              users2.map((user) => <NewUsers user={user} view={setView} />)}
             <div className="pagination-control">
               <div>1/5</div>
               <div>&#10094;</div>
@@ -249,6 +310,7 @@ function Users() {
           </div>
         </div>
       </div>
+      <div>{view ? <UserDetails piks={piks} view={setView} /> : <></>}</div>
     </>
   );
 }

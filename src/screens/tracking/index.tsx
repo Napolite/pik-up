@@ -311,15 +311,21 @@ function Tracking() {
         <div className="title">Tracking</div>
         <div className="tracking-container">
           <div>
-            <div className="tracking-title">New Requests</div>
+            <div className="tracking-title">
+              <div>New Requests</div>
+            </div>
             <Requests pik={newReq} />
           </div>
           <div>
-            <div className="tracking-title">Pik-Ups in Transit</div>
+            <div className="tracking-title">
+              <div>Pik-Ups in Transit</div>
+            </div>
             <Requests pik={inTransit} />
           </div>
           <div>
-            <div className="tracking-title">Completed Pik-ups</div>
+            <div className="tracking-title">
+              <div>Completed Pik-ups</div>
+            </div>
             <Requests pik={completed} />
           </div>
         </div>

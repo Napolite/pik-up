@@ -6,7 +6,7 @@
 }
 
 .pikup-sparse {
-  padding: 20px;
+  padding: 20px 0;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -77,7 +77,6 @@
 }
 .pikup-expanded > div:nth-child(4) {
   padding-bottom: 30px;
-  border-bottom: 1px solid #dfe1e5;
 }
 
 .pikup-expanded > div:nth-child(4) > div > div:nth-child(1) {
