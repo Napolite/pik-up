@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginMain({ setPage }: any) {
+  const navigate = useNavigate();
   return (
     <div className="login-form-root">
       <div className="form-title">Sign in to your account</div>
@@ -15,8 +17,11 @@ function LoginMain({ setPage }: any) {
         <div className="form-input">
           <label>Password</label>
           <input type="password" />
+          <i className="fa-solid fa-eye" id="eye"></i>
         </div>
-        <button className="form-button">Submit</button>
+        <button className="form-button" onClick={() => navigate("/")}>
+          Submit
+        </button>
         <p
           className="form-link"
           onClick={() => {
