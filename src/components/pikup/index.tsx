@@ -1,14 +1,15 @@
 //This file is in JSX to allow me use the click event in a div element
 
+import MapComponent from "components/mapComponent";
 import React, { useState } from "react";
 import "./pikup.css";
 
 function Pikup({ pik }: any) {
   const [expand, setExpand] = useState(false);
   return (
-    <div className="pikup-root" onClick={() => setExpand(!expand)}>
+    <div className="pikup-root">
       {!expand ? (
-        <div className="pikup-sparse">
+        <div className="pikup-sparse" onClick={() => setExpand(!expand)}>
           <div>{`${pik.from}  → ${pik.to}`}</div>
           <div
             style={{
@@ -66,7 +67,9 @@ function Pikup({ pik }: any) {
               <div>driver: </div> <div>{pik.driver || pik.status}</div>
             </div>
           </div>
-          <div className="map">map here</div>
+          <div className="map" onClick={() => setExpand(expand)}>
+            <MapComponent />
+          </div>
           <div>
             <div>
               <div>distance</div>

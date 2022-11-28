@@ -73,7 +73,7 @@
 }
 
 .map {
-  height: 64px;
+  height: 100px;
 }
 .pikup-expanded > div:nth-child(4) {
   padding-bottom: 30px;
