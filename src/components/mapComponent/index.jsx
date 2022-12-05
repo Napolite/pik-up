@@ -1,72 +1,126 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import {
   GoogleMap,
   LoadScript,
   DirectionsRenderer,
   DirectionsService,
-  useLoadScript,
 } from "@react-google-maps/api";
 
-function MapComponent() {
-  const [response, setResponse] = useState();
-  const { isLoaded, setLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBt4CxOCzVxRLphMzqi5LYaiBmmTb8Y8RE",
-  });
-  const directionsCallback = (response) => {
-    console.log("here reponse", response);
+class MapComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      origin: "6.605874, 3.349149",
+      destination: "6.446984, 3.411985",
+      response: null,
+      travelMode: "DRIVING",
+      apiKey: "",
+    };
+  }
+
+  componentDidMount() {
+    this.setState({ apiKey: "AIzaSyBt4CxOCzVxRLphMzqi5LYaiBmmTb8Y8RE" });
+  }
+
+  //   componentDidUpdate() {
+  //     this.setState({ apiKey: "AIzaSyBt4CxOCzVxRLphMzqi5LYaiBmmTb8Y8RE" });
+  //   }
+
+  directionsCallback = (response) => {
+    console.log(response);
 
     if (response !== null) {
       if (response.status === "OK") {
-        setResponse(() => ({
-          response,
-        }));
+        this.setState({ response: response });
       } else {
         console.log("response: ", response);
       }
     }
   };
-  return (
-    <>
-      {isLoaded ? (
+
+  render() {
+    console.log(this.state);
+    return (
+      <LoadScript googleMapsApiKey={this.state.apiKey}>
         <GoogleMap
-          id="map-id"
-          zoom={12}
+          // required
+          id="direction-example"
+          // required
           mapContainerStyle={{
             height: "100px",
-            width: "400px",
+            width: "100%",
           }}
+          // required
+          zoom={14}
+          // required
           center={{
-            lat: 6.615356,
-            lng: 3.323782,
+            lat: 6.605874,
+            lng: 3.349149,
+          }}
+          // optional
+          onClick={this.onMapClick}
+          // optional
+          onLoad={(map) => {
+            console.log("DirectionsRenderer onLoad map: ", map);
+          }}
+          // optional
+          onUnmount={(map) => {
+            console.log("DirectionsRenderer onUnmount map: ", map);
           }}
         >
-          {
+          {this.state.destination !== "" && this.state.origin !== "" && (
             <DirectionsService
               // required
               options={{
-                destination: "agege",
-                origin: "ikeja",
-                travelMode: "WALKING",
+                destination: this.state.destination,
+                origin: this.state.origin,
+                travelMode: this.state.travelMode,
               }}
               // required
-              callback={directionsCallback}
+              callback={this.directionsCallback}
+              // optional
+              onLoad={(directionsService) => {
+                console.log(
+                  "DirectionsService onLoad directionsService: ",
+                  directionsService
+                );
+              }}
+              // optional
+              onUnmount={(directionsService) => {
+                console.log(
+                  "DirectionsService onUnmount directionsService: ",
+                  directionsService
+                );
+              }}
             />
-          }
+          )}
 
-          {response !== null && (
+          {this.state.response !== null && (
             <DirectionsRenderer
               // required
               options={{
-                directions: response,
+                directions: this.state.response,
+              }}
+              // optional
+              onLoad={(directionsRenderer) => {
+                console.log(
+                  "DirectionsRenderer onLoad directionsRenderer: ",
+                  directionsRenderer
+                );
+              }}
+              // optional
+              onUnmount={(directionsRenderer) => {
+                console.log(
+                  "DirectionsRenderer onUnmount directionsRenderer: ",
+                  directionsRenderer
+                );
               }}
             />
           )}
         </GoogleMap>
-      ) : (
-        <></>
-      )}
-    </>
-  );
+      </LoadScript>
+    );
+  }
 }
 
 export default MapComponent;

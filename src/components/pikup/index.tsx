@@ -35,7 +35,10 @@ function Pikup({ pik }: any) {
         </div>
       ) : (
         <div className="pikup-expanded">
-          <div className="pikup-sparse-expanded">
+          <div
+            className="pikup-sparse-expanded"
+            onClick={() => setExpand(!expand)}
+          >
             <div>{`${pik.from}  → ${pik.to}`}</div>
             <div
               style={{
@@ -67,7 +70,7 @@ function Pikup({ pik }: any) {
               <div>driver: </div> <div>{pik.driver || pik.status}</div>
             </div>
           </div>
-          <div className="map" onClick={() => setExpand(expand)}>
+          <div className="map">
             <MapComponent />
           </div>
           <div>
