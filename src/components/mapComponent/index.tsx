@@ -6,8 +6,16 @@ import {
   DirectionsService,
 } from "@react-google-maps/api";
 
-class MapComponent extends Component {
-  constructor(props) {
+interface state {
+  origin: string;
+  destination: string;
+  response: null;
+  travelMode: any;
+  apiKey: string;
+}
+
+class MapComponent extends Component<{}, state> {
+  constructor(props: any) {
     super(props);
     this.state = {
       origin: "6.605874, 3.349149",
@@ -26,7 +34,7 @@ class MapComponent extends Component {
   //     this.setState({ apiKey: "AIzaSyBt4CxOCzVxRLphMzqi5LYaiBmmTb8Y8RE" });
   //   }
 
-  directionsCallback = (response) => {
+  directionsCallback = (response: any) => {
     console.log(response);
 
     if (response !== null) {
