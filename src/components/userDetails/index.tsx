@@ -12,7 +12,7 @@ function UserDetails({ piks, view }: any) {
     $(function () {
       console.log("hello world");
       $(".arrow").css({
-        animation: show ? "show 2s forwards" : "hide 2s forwards",
+        animation: show ? "show 0.3s forwards" : "hide 0.3s forwards",
       });
     });
   };
@@ -35,9 +35,11 @@ function UserDetails({ piks, view }: any) {
           <div>...</div>
         </div>
         <div className="details-user">
-          <div>
-            <div className="details-header">User Details:</div>
-            <div></div>
+          <div className="accordion">
+            <div className="details-header">User Details</div>
+            <div className="arrow2" onClick={handleAccordion}>
+              &#x2304;
+            </div>
           </div>
           <div>
             <div>
