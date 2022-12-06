@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavBar from "components/navbar";
 import "./tracking.css";
 import Requests from "./newRequests";
+import { useLoadScript } from "@react-google-maps/api";
 function Tracking() {
   const [newReq, setNewReq] = useState([
     {

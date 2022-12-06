@@ -58,7 +58,6 @@ class MapComponent extends Component {
             lng: 3.349149,
           }}
           // optional
-          onClick={this.onMapClick}
           // optional
           onLoad={(map) => {
             console.log("DirectionsRenderer onLoad map: ", map);

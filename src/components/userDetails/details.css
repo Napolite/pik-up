@@ -64,15 +64,41 @@
   border-radius: 4px;
 }
 
-.details-header {
+.accordion {
   font-size: 0.875rem;
   color: #5c6370;
   height: 40px;
   width: 90%;
   display: flex;
-  padding: 0 5%;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 5%;
   background-color: #f8f8f8;
+}
+
+.accordion > div:nth-child(2) {
+  font-size: 25px;
+  cursor: pointer;
+  line-height: 10px;
+  /* animation: show 2s; */
+}
+
+@keyframes show {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes hide {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 .details-user > div:nth-child(2) {

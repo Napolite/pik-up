@@ -17,6 +17,7 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "faker": "^6.6.6",
+    "jquery": "^3.6.1",
     "react": "^18.2.0",
     "react-calendar": "^4.0.0",
     "react-chartjs-2": "^4.3.1",
@@ -54,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.14",
     "@types/react-calendar": "^3.5.3"
   }
 }

@@ -42,6 +42,7 @@ function ChartDiv({ title, chartdata }: any) {
     labels,
     datasets: [
       {
+        fill: true,
         label: "This Year",
         data: chartdata || [],
         borderColor: "rgb(0,0,0)",

@@ -1,9 +1,21 @@
 import Pikup from "components/pikup";
-import React from "react";
+import React, { useState } from "react";
+
+import $ from "jquery";
 import "./details.css";
 import image from "assets/images/no image.png";
 function UserDetails({ piks, view }: any) {
-  console.log(piks);
+  const [show, setShow] = useState(true);
+
+  const handleAccordion = () => {
+    setShow(!show);
+    $(function () {
+      console.log("hello world");
+      $(".arrow").css({
+        animation: show ? "show 2s forwards" : "hide 2s forwards",
+      });
+    });
+  };
   return (
     <div className="details-root">
       <div className="details-container">
@@ -44,15 +56,13 @@ function UserDetails({ piks, view }: any) {
           </div>
         </div>
         <div className="pikups">
-          <div>
+          <div className="accordion">
             <div className="details-header">Pikup History</div>
-            <div></div>
+            <div className="arrow" onClick={handleAccordion}>
+              &#x2304;
+            </div>
           </div>
-          <div>
-            {piks.map((pik: any) => (
-              <Pikup pik={pik} />
-            ))}
-          </div>
+          <div>{show && piks.map((pik: any) => <Pikup pik={pik} />)}</div>
         </div>
       </div>
     </div>
