@@ -1,38 +1,36 @@
 import React, { useState } from "react";
 import TabInfo from "../../components/tab";
 import NavBar from "../../components/navbar";
-import group1 from "../../assets/images/group.png";
-import group2 from "../../assets/images/group (1).png";
-import atm1 from "../../assets/images/local_atm.png";
-import atm2 from "../../assets/images/local_atm (1).png";
-import searchIcon from "../../assets/images/Primary fill.png";
+
 import Driver from "./driver";
 import UserDetails from "components/userDetails";
+
+import { tDrivers, aDrivers, tRevenue, avRevenue, searchIcon } from "assets";
 
 function Fleets() {
   const [tabs, setTab] = useState([
     {
       title: "Total fleets",
       value: "1720",
-      image: group1,
+      image: tDrivers,
       color: "#E9FFDD",
     },
     {
       title: "Active fleets",
       value: "920",
-      image: group2,
+      image: aDrivers,
       color: "#FAF5C3",
     },
     {
       title: "Total Revenue",
       value: " ₦ 192,830.05",
-      image: atm1,
+      image: tRevenue,
       color: "#f1f1f1",
     },
     {
       title: "Average Revenue By fleet",
       value: " ₦ 2,830.00",
-      image: atm2,
+      image: avRevenue,
       color: "#FCECEC",
     },
   ]);

@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/images/Group (1).png";
-import NotificationIcon from "../../assets/images/notifications.png";
-import avatar from "../../assets/images/no image.png";
+
+//assets
+import { logo, Notification, avatar } from "assets";
+
+//css
 import "./navbar.css";
 
 function NavBar({ active }: any) {
   return (
     <div className="navbar-root">
       <div>
-        <img src={Logo} alt="" className="nav-logo" />
+        <img src={logo} alt="" className="nav-logo" />
       </div>
       <div className="nav-menu-parent">
         <div className="nav-menu">
@@ -44,7 +46,7 @@ function NavBar({ active }: any) {
       </div>
       <div className="accounts">
         <div>
-          <img src={NotificationIcon} alt="" />
+          <img src={Notification} alt="" />
         </div>
         <div className="avatar-details">
           <img src={avatar} alt="" />
